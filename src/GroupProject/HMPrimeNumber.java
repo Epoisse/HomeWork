@@ -1,25 +1,28 @@
 package GroupProject;
 
-import java.util.Scanner;
-
 public class HMPrimeNumber {
 
 	public static void main(String args[]) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Please input a number");
-		int num = input.nextInt();
-		int i = 2;
-		while (i < num) {
-			if (num % i == 0) {
-				System.out.println("not a prime");
-				break;
-			} else if (i == num - 1) {
-				System.out.println("prime");
-				break;
-			} else {
-				i++;
+		int number = 67;
+		boolean isTrue = true;
+
+		if (number > 1) {
+			for (int i = 2; i < number; i++) {
+				if (number % i == 0) {
+					isTrue = false;
+					break;
+				}
 			}
+
+		} else {
+			isTrue = false;
+
 		}
-		input.close();
+		if (isTrue) {
+			System.out.println("The number " + number + " is prime");
+		} else {
+			System.out.println("The number " + number + " is not prime");
+		}
+
 	}
 }

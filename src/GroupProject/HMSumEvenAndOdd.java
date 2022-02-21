@@ -12,14 +12,12 @@ public class HMSumEvenAndOdd {
 			for (int j = 0; j < nums[i].length; j++) {
 				if (nums[i][j] % 2 == 0) {
 					evensum += nums[i][j];
-				} else if (nums[i][j] % 2 != 0) {
+				} else
 					oddsum += nums[i][j];
-				}
 			}
 		}
 		System.out.println("Summ of even numbers is " + evensum);
 		System.out.println("Summ of even numbers is " + oddsum);
-
 	}
 
 }
